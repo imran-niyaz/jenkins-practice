@@ -1,0 +1,96 @@
+You are a Senior Test Automation Engineer.
+
+Create a Playwright native UI automation framework using TypeScript.
+
+Do NOT include API testing.
+
+Use this folder structure:
+
+playwright-ui-framework/
+│
+├── tests/
+│   ├── login/
+│   │   └── login.spec.ts
+│   ├── dashboard/
+│   │   └── dashboard.spec.ts
+│   └── e2e/
+│       └── user-flow.spec.ts
+│
+├── pages/
+│   ├── base.page.ts
+│   ├── login.page.ts
+│   ├── dashboard.page.ts
+│   └── user.page.ts
+│
+├── components/
+│   ├── header.component.ts
+│   ├── sidebar.component.ts
+│   └── modal.component.ts
+│
+├── fixtures/
+│   ├── base.fixture.ts
+│   └── auth.fixture.ts
+│
+├── test-data/
+│   ├── users.json
+│   └── login-data.json
+│
+├── utils/
+│   ├── wait-utils.ts
+│   ├── file-utils.ts
+│   └── date-utils.ts
+│
+├── config/
+│   ├── env.ts
+│   └── urls.ts
+│
+├── constants/
+│   └── messages.ts
+│
+├── auth/
+│   └── storageState.json
+│
+├── reports/
+│
+├── playwright.config.ts
+├── package.json
+├── tsconfig.json
+└── README.md
+
+Framework requirements:
+
+1. Use Playwright with TypeScript.
+2. Use Page Object Model.
+3. Use components for reusable UI sections like header, sidebar, and modal.
+4. Use custom fixtures to initialize page objects.
+5. Keep test files clean and readable.
+6. Keep locators and page actions inside page classes.
+7. Keep assertions mostly inside spec files.
+8. Use test-data JSON files for test input.
+9. Use auth/storageState.json for reusable login session.
+10. Configure playwright.config.ts with:
+   - Chromium, Firefox, and WebKit projects
+   - baseURL from config/env.ts
+   - HTML report
+   - screenshots on failure
+   - video on retry
+   - trace on retry
+11. Add scripts in package.json:
+   - test
+   - test:headed
+   - test:debug
+   - test:ui
+   - report
+12. Add README.md with setup and execution instructions.
+
+Coding standards:
+
+- Use async/await.
+- Use Playwright recommended locators like getByRole, getByText, getByLabel when possible.
+- Avoid hard waits.
+- Avoid duplicated locators.
+- Avoid Selenium-style base test classes.
+- Do not create unnecessary complex layers.
+- Keep the framework simple, scalable, and easy to maintain.
+
+Now generate the full framework files with sample working code for each file.
